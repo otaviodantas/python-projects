@@ -3,7 +3,7 @@
 class ExtratorArgumentosUrl():
     def __init__(self, url):
         if (self.ValidaURL(url)):
-            self.url = url 
+            self.url = url.lower() 
         
         else:
             raise LookupError('URL inválida!')
@@ -17,8 +17,8 @@ class ExtratorArgumentosUrl():
             return False
 
     def ExtractIndex(self):
-        fixCent_O = 'moedaorigem'
-        fixCent_D = 'moedadestino'
+        fixCent_O = 'moedaorigem='
+        fixCent_D = 'moedadestino='
 
         Index_CentOrigin_I = self.AuxIndex(fixCent_O)
         Index_CentOrigin_E = self.url.find('&') 
@@ -32,4 +32,10 @@ class ExtratorArgumentosUrl():
         return centDestiny, centOring
 
     def AuxIndex(self, cent):
-        return self.url.find(cent) + len(cent) + 1
+        return self.url.find(cent) + len(cent)
+
+    def ExtractValor(self):
+        valor = 'valor='
+        IndexValor = self.AuxIndex(valor)
+        only_valor = self.url[IndexValor:]
+        return only_valor
