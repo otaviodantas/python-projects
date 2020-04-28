@@ -10,7 +10,7 @@ class ExtratorArgumentosUrl():
     
     @staticmethod
     def ValidaURL(url):
-        if (url):
+        if (url) and (url.startswith('https://www.bytebank.com')):
             return True
         
         else:
@@ -19,12 +19,13 @@ class ExtratorArgumentosUrl():
     def ExtractIndex(self):
         fixCent_O = 'moedaorigem='
         fixCent_D = 'moedadestino='
+        firstArgument = self.url.find('&') + 1
 
         Index_CentOrigin_I = self.AuxIndex(fixCent_O)
         Index_CentOrigin_E = self.url.find('&') 
 
         Index_CentDestiny_I = self.AuxIndex(fixCent_D)
-        Index_CentDestiny_E = self.url.find('&', 60)
+        Index_CentDestiny_E = self.url.find('&', firstArgument)
 
         centOring   = self.url[Index_CentOrigin_I:Index_CentOrigin_E]
         centDestiny = self.url[Index_CentDestiny_I:Index_CentDestiny_E]

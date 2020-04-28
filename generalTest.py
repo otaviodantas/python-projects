@@ -6,4 +6,4 @@ react = ExtratorArgumentosUrl(url)
 
 centO, centD = react.ExtractIndex()
 valor = react.ExtractValor()
-print(centO, centD, valor)
+print(centO, centD, valor) 
