@@ -4,6 +4,8 @@ url = "https://www.bytebank.com.br/cambio?moedaorigem=real&moedadestino=dolar&va
 
 react = ExtratorArgumentosUrl(url)
 
-centO, centD = react.ExtractIndex()
-valor = react.ExtractValor()
-print(centO, centD, valor) 
+#centO, centD = react.ExtractIndex()
+#valor = react.ExtractValor()
+#print(centO, centD, valor) 
+
+print(react)

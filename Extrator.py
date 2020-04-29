@@ -7,7 +7,7 @@ class ExtratorArgumentosUrl():
         
         else:
             raise LookupError('URL inválida!')
-    
+
     @staticmethod
     def ValidaURL(url):
         if (url) and (url.startswith('https://www.bytebank.com')):
@@ -40,3 +40,9 @@ class ExtratorArgumentosUrl():
         IndexValor = self.AuxIndex(valor)
         only_valor = self.url[IndexValor:]
         return only_valor
+    
+    def __str__(self):
+        m_d, m_o = self.ExtractIndex()
+        valor = f'Moeda Origem = {m_o}\n' + f'Moeda Destino = {m_d}\n' + f'Valor convertido = {self.ExtractValor()}'
+        return valor
+
