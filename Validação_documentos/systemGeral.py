@@ -5,7 +5,7 @@ bin_ = factoryDoc.factory(cpf)
 print(bin_)"""
 '_______________________________________________'
 
-from validD import TelefoneBR
+from validTelefone import TelefoneBR
 
 telTest = '5499999999'
 model = TelefoneBR(telTest)

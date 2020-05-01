@@ -1,4 +1,4 @@
-from Extrator import ExtratorArgumentosUrl
+from ExtratorURL import ExtratorArgumentosUrl
 
 url = "https://www.bytebank.com.br/cambio?moedaorigem=real&moedadestino=dolar&valor=700" 
 
