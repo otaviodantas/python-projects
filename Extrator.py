@@ -1,5 +1,3 @@
-# Nesta aula vamos fazer uma função que recebe a URL e desmembra ela
-
 class ExtratorArgumentosUrl():
     def __init__(self, url):
         if (self.ValidaURL(url)):
